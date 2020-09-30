@@ -9,6 +9,9 @@
             </div>
             @endif
         </div>
+        <section>
+            <input type="file" id="image" wire:change="$emit('fileChoosen')">
+        </section>
         <form class="my-4 flex" wire:submit.prevent="addComment">
             <input 
                 type="text" 
@@ -34,3 +37,4 @@
         {{ $comments->links('pagination-links') }}
     </div>
 </div> 
+
